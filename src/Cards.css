@@ -1,3 +1,47 @@
 .Cards {
-    background: white;
+  /* background: white; */
+
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+}
+
+.image {
+    width:30%;
+}
+
+.introduction {
+    width:30%;
+}
+
+
+.introduction h1 {
+  color: white;
+  font-size: 2.5em;
+  font-weight: 700;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.introduction span {
+  display: block;
+  color: #00fc87;
+  font-size: 1.6em;
+  line-height: 1.1em;
+}
+
+.introduction p {
+  color: white;
+}
+.introduction  .detail {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap:wrap;
+  margin: 35px 0 20px;
+}
+
+.introduction .detail_content {
+  color: white;
+  width: 50%;
 }

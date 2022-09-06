@@ -38,12 +38,14 @@ function App() {
   };
 
   useEffect(() => {
-    getMovie('157336');
+    getMovie("157336");
 
     var states = new window.Bloodhound({
-      datumTokenizer: function (datum) {
-        return window.Bloodhound.tokenizers.whitespace(datum.value);
-      },
+      // datumTokenizer: function (datum) {
+      //   console.log(datum);
+      //   return window.Bloodhound.tokenizers.whitespace(datum.value);
+      // },
+      datumTokenizer:window.Bloodhound.tokenizers.whitespace('value'),
       queryTokenizer: window.Bloodhound.tokenizers.whitespace,
       // `states` is an array of state names defined in "The Basics"
       //   local: data,
@@ -71,23 +73,15 @@ function App() {
           highlight: true,
           minLength: 1,
         },
-        { source: states.ttAdapter() }
+        { source: states.ttAdapter(),display: 'value',}
       )
-      .on(
-        "typeahead:selected",
-        function (obj, datum) {
-          getMovie(datum.id);
-          console.log(datum.id);
-        }
-        // {
-        //   name: "states",
-        //   source: states,
-        // }
-      );
+      .on("typeahead:selected", function (obj, datum) {
+        console.log(datum);
+        getMovie(datum.id);
+      });
   }, []);
-
   const bgStyle = {
-    backgroundImage: `url('https://image.tmdb.org/t/p/original${movie.backdrop_path}')`,
+    backgroundImage: `linear-gradient(rgba(0,0,0,.85) 15%,rgba(0,0,0,.2) 40%,#000 90%),url('https://image.tmdb.org/t/p/original${movie.backdrop_path}')`,
     backgroundRepeat: "no-repeat",
     backgroundAttachment: "fixed",
     backgroundSize: "cover",

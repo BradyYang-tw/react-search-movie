@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  width: 60%;
+  /* width: 60%; */
   margin: 0 auto;
   
 }
@@ -44,10 +44,10 @@
   }
 }
 
-.App-article{
+/* .App-article{
   height: 700px;
   
-}
+} */
 
 #custom-templates .empty-message {
   padding: 5px 10px;

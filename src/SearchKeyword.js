@@ -19,7 +19,7 @@ function SearchKeyword() {
           className="typeahead"
           type="text"
           placeholder="States of USA"
-          onClick={handleKeyword}
+          // onChange={handleKeyword}
         />
       </div>
     </form>
