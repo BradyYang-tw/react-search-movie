@@ -13,7 +13,7 @@ function SearchKeyword() {
   };
 
   return (
-    <form className="searchbox">
+    // <form className="searchbox">
       <div id="bloodhound">
         <input
           className="typeahead"
@@ -22,7 +22,7 @@ function SearchKeyword() {
           // onChange={handleKeyword}
         />
       </div>
-    </form>
+    // </form>
   );
 }
 

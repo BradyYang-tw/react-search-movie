@@ -3,6 +3,7 @@ import "./App.css";
 import SearchMulti from "./SearchMulti";
 import SearchKeyword from "./SearchKeyword";
 import Cards from "./Cards";
+import Footer from "./Footer";
 import React, { useState, useEffect } from "react";
 
 function App() {
@@ -45,7 +46,7 @@ function App() {
       //   console.log(datum);
       //   return window.Bloodhound.tokenizers.whitespace(datum.value);
       // },
-      datumTokenizer:window.Bloodhound.tokenizers.whitespace('value'),
+      datumTokenizer: window.Bloodhound.tokenizers.whitespace("value"),
       queryTokenizer: window.Bloodhound.tokenizers.whitespace,
       // `states` is an array of state names defined in "The Basics"
       //   local: data,
@@ -73,7 +74,7 @@ function App() {
           highlight: true,
           minLength: 1,
         },
-        { source: states.ttAdapter(),display: 'value',}
+        { source: states.ttAdapter(), display: "value" }
       )
       .on("typeahead:selected", function (obj, datum) {
         console.log(datum);
@@ -107,7 +108,9 @@ function App() {
       <article className="App-article">
         <Cards data={movie} />
       </article>
-      <footer className="App-footer"></footer>
+      <footer className="App-footer">
+        <Footer />
+      </footer>
     </div>
   );
 }

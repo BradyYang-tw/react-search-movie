@@ -1,0 +1,35 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+}
+.icon-group {
+  width: 100px;
+  display: flex;
+  justify-content: space-between;
+}
+/* @media (min-width: 600px) {
+    div {
+      min-height: 64px;
+    }
+  } */
+
+.greet {
+  font-size: 14px;
+  color: white;
+}
+.CopyRight {
+  font-size: 12px;
+  color: white;
+}
+
+a {
+  color: white;
+}
+
+a:hover {
+  color: pink;
+}
+
+a:active {
+  color: blue;
+}
