@@ -40,18 +40,18 @@ function Cards(props) {
 
         <div class="detail">
           <span>{filter_genres}</span>
-          <span>{filter_companies}</span>
+          <p>{filter_companies}</p>
           <div class="detail_content">
             Original Release:
             <span class="detail_content_span">{props.data.release_date}</span>
           </div>
           <div class="detail_content">
             Running Time:
-            <span class="detail_content_span">{props.data.runtime}</span>
+            <span class="detail_content_span">{props.data.runtime}mins</span>
           </div>
           <div class="detail_content">
             Box Office:
-            <span class="detail_content_span">{props.data.revenue}</span>
+            <span class="detail_content_span">${Intl.NumberFormat('en-US').format(props.data.revenue)}</span>
           </div>
           <div class="detail_content">
             Vote Average:

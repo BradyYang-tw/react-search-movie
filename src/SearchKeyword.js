@@ -18,7 +18,7 @@ function SearchKeyword() {
         <input
           className="typeahead"
           type="text"
-          placeholder="States of USA"
+          placeholder="Search Movie By Keyword"
           // onChange={handleKeyword}
         />
       </div>
