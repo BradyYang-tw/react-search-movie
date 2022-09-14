@@ -9,7 +9,6 @@ function Cards(props) {
   let poster = `https://image.tmdb.org/t/p/w500/${props.data.poster_path}`;
   let genres;
   if (Object.keys(props.data).length != 0) {
-
     genres = props.data.genres.map((data) => {
       return data.name;
     });
@@ -18,7 +17,10 @@ function Cards(props) {
   }
 
   let companies;
-  if (props.data.production_companies && props.data.production_companies.length > 0) {
+  if (
+    props.data.production_companies &&
+    props.data.production_companies.length > 0
+  ) {
     console.log(props.data.production_companies);
     companies = props.data.production_companies.map((data) => {
       return data.name;
@@ -29,18 +31,16 @@ function Cards(props) {
 
   return (
     <div className="Cards">
-      {/* <h2>內容</h2> */}
       <div className="image">
-        <img src={poster}></img>
+        <img src={poster} ></img>
       </div>
       <div className="introduction">
         <h1>{props.data.original_title}</h1>
         <span>{props.data.tagline}</span>
         <p>{props.data.overview}</p>
-
+        <span>{filter_genres}</span>
+        <p>{filter_companies}</p>
         <div class="detail">
-          <span>{filter_genres}</span>
-          <p>{filter_companies}</p>
           <div class="detail_content">
             Original Release:
             <span class="detail_content_span">{props.data.release_date}</span>
@@ -51,7 +51,9 @@ function Cards(props) {
           </div>
           <div class="detail_content">
             Box Office:
-            <span class="detail_content_span">${Intl.NumberFormat('en-US').format(props.data.revenue)}</span>
+            <span class="detail_content_span">
+              ${Intl.NumberFormat("en-US").format(props.data.revenue)}
+            </span>
           </div>
           <div class="detail_content">
             Vote Average:

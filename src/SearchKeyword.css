@@ -7,7 +7,6 @@
   outline: medium;
   border-bottom: solid 1px white;
   color: white;
-  width: 200%;
 }
 
 .tt-menu {
@@ -32,4 +31,33 @@
   cursor: pointer;
   color: limeGreen;
   /* background-color: darkGrey; */
+}
+
+@media only screen and (max-width:414px) {
+  .typeahead {
+    /* width: 100%; */
+    font-size: 16px;
+  }
+
+  .tt-menu {
+    /* UPDATE: newer versions use tt-menu instead of tt-dropdown-menu */
+    width: 200px;
+    padding: 0;
+  }
+}
+
+@media only screen and (min-width: 737px) and (max-width: 1180px) {
+  .typeahead {
+    /* width: 100%; */
+    font-size: 24px;
+  }
+  .tt-menu {
+    /* UPDATE: newer versions use tt-menu instead of tt-dropdown-menu */
+    /* width: 200px; */
+    padding: 0;
+  }
+  .tt-suggestion {
+    font-size: 20px;
+    text-align: left;
+  }
 }

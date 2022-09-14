@@ -1,26 +1,23 @@
 .Cards {
-  /* background: white; */
-
   width: 50%;
   margin: 0 auto;
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
 
-.image {
-  /* width: 30%; */
-  height: 750px;
-}
+
 
 .introduction {
-  height: 750px;
+  /* height: auto; */
   flex: 1;
   background-image: linear-gradient(
     rgba(0, 0, 0, 0.85) 15%,
     rgba(0, 0, 0, 0.2) 40%,
     #000 90%
   );
-  padding: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
   text-align: left;
 }
 
@@ -42,7 +39,6 @@
 .introduction p {
   color: white;
   text-align: justify;
-  
 }
 .introduction .detail {
   display: flex;
@@ -54,4 +50,49 @@
 .introduction .detail_content {
   color: white;
   width: 50%;
+}
+
+
+@media only screen and (max-width: 736px) {
+  .Cards {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap-reverse;
+  }
+  img {
+    height: 100%;
+    width: 100%;
+  }
+  .introduction {
+    background-image: linear-gradient(
+      rgba(0, 0, 0, 0.85) 15%,
+      rgba(0, 0, 0, 0.2) 40%,
+      #000 90%
+    );
+    padding: 0px;
+  }
+}
+
+@media only screen and (min-width: 737px) and (max-width: 1180px) {
+  .Cards {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap-reverse; 
+  }
+  .image {
+    width: 100%;
+  }
+  /* img {
+    height: 50%;
+    width: 50%;
+  } */
+  .introduction {
+    font-size: 24px;
+    background-image: linear-gradient(
+      rgba(0, 0, 0, 0.85) 15%,
+      rgba(0, 0, 0, 0.2) 40%,
+      #000 90%
+    );
+    padding: 0px;
+  }
 }

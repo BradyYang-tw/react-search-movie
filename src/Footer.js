@@ -18,28 +18,28 @@ const Footer = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <FontAwesomeIcon icon={faTwitter} />
+          <FontAwesomeIcon className='icon' icon={faTwitter} />
         </a>
         <a
           href="https://github.com/BradyYang-tw"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <FontAwesomeIcon icon={faGithub} />
+          <FontAwesomeIcon className='icon' icon={faGithub} />
         </a>
         <a
           href="https://www.instagram.com/punk6233/"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <FontAwesomeIcon icon={faInstagram} />
+          <FontAwesomeIcon className='icon' icon={faInstagram} />
         </a>
         <a
           href="https://www.linkedin.com/in/hsin-yu-yang-a9a590154/"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <FontAwesomeIcon icon={faLinkedin} />
+          <FontAwesomeIcon className='icon' icon={faLinkedin}/>
         </a>
       </div>
       <div className="CopyRight">

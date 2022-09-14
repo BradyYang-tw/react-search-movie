@@ -85,7 +85,10 @@ function App() {
     backgroundImage: `linear-gradient(rgba(0,0,0,.85) 15%,rgba(0,0,0,.2) 40%,#000 90%),url('https://image.tmdb.org/t/p/original${movie.backdrop_path}')`,
     backgroundRepeat: "no-repeat",
     backgroundAttachment: "fixed",
-    backgroundSize: "cover",
+    backgroundSize: "contain",
+    width: '100%',
+    // height: 'auto',
+    backgroundPosition:'center',
   };
   return (
     <div className="App" style={bgStyle}>

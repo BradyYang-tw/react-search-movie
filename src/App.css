@@ -1,42 +1,72 @@
 body {
   overflow-y: hidden;
+  width: 100%;
 }
 .App {
   text-align: center;
   margin: 0 auto;
-  /* height: 100vh; */
+  height: 100vh;
   position: relative;
-  min-height: 100%;
 }
 
 .App-header {
   background-color: #282c34;
-  /* min-height: 100vh; */
   display: flex;
-  /* flex-direction: column; */
-
   align-items: center;
   justify-content: space-around;
   font-size: calc(10px + 2vmin);
   color: white;
-
   height: 50px;
-  /* line-height: 100px; */
-  /* height: 100px; */
 }
 
+
 .App-article {
-  /* min-height: 100%; */
   padding-bottom: 100px;
 }
 
 .App-footer {
-  /* height: 50px;
-  width:50%;
-  margin: 0 auto; */
-  line-height: 100px;
-  height: 100px;
   width: 100%;
   position: absolute;
   bottom: 0;
+}
+
+
+@media only screen and (max-width: 736px) {
+  body {
+    overflow-y: auto;
+    width: 100%;
+  }
+  .App-header {
+    font-size: 24px;
+    justify-content: space-between;
+  }
+  .App-article {
+    padding: 0px;
+  }
+  .App-footer {
+    position: static;
+    background-color: rgba(0, 0, 0, 0.85);
+  }
+}
+
+@media only screen and (min-width: 737px) and (max-width: 1180px) {
+  body {
+    overflow-y: auto;
+    width: 100%;
+  }
+  .App{
+    height: auto;
+  }
+  .App-header {
+    font-size: 36px;
+    justify-content: space-between;
+    
+  }
+  .App-article {
+    padding: 0px;
+  }
+  .App-footer {
+    position: static;
+    background-color: rgba(0, 0, 0, 0.85);
+  }
 }
